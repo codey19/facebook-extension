@@ -1,0 +1,59 @@
+[
+    {
+      "id": 1,
+      "priority": 1,
+      "action": {
+        "type": "modifyHeaders",
+        "responseHeaders": [
+          {
+            "header": "set-cookie",
+            "operation": "remove"
+          }
+        ]
+      },
+      "condition": {
+        "initiatorDomains": [
+          "facebook.com",
+          "www.facebook.com",
+          "m.facebook.com"
+        ],
+        "resourceTypes": [
+          "main_frame",
+          "sub_frame",
+          "xmlhttprequest",
+          "script",
+          "image",
+          "other"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "priority": 1,
+      "action": {
+        "type": "modifyHeaders",
+        "responseHeaders": [
+          {
+            "header": "set-cookie",
+            "operation": "remove"
+          }
+        ]
+      },
+      "condition": {
+        "requestDomains": [
+          "facebook.com",
+          "www.facebook.com",
+          "m.facebook.com",
+          "fbcdn.net"
+        ],
+        "resourceTypes": [
+          "main_frame",
+          "sub_frame",
+          "xmlhttprequest",
+          "script",
+          "image",
+          "other"
+        ]
+      }
+    }
+  ]
